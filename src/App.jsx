@@ -7,13 +7,12 @@ export default function WeddingWebsite() {
   const [submitted, setSubmitted] = useState(false);
 
   // Replace these with your actual Google Form submit URL and entry IDs.
-  const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse";
+  const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSefKojcWST73rg21p4gTiJo-vBQmi9ONoTZHiLm3PzSYESe2A/formResponse";
   const GOOGLE_FORM_FIELDS = {
-    name: "entry.YOUR_NAME_FIELD_ID",
-    attending: "entry.YOUR_ATTENDING_FIELD_ID",
-    guests: "entry.YOUR_GUESTS_FIELD_ID",
-    meal: "entry.YOUR_MEAL_FIELD_ID",
-    message: "entry.YOUR_MESSAGE_FIELD_ID",
+    name: "entry.1808892157",
+    attending: "entry.1387884638",
+    guests: "entry.136059766",
+    message: "entry.1399768232",
   };
 
   const handleRsvpSubmit = async (e) => {
