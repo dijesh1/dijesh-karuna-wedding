@@ -210,13 +210,13 @@ export default function WeddingWebsite() {
           <p className="text-white/75 mb-8">Please respond by {wedding.rsvpDate}. We can’t wait to celebrate with you.</p>
           <form onSubmit={handleRsvpSubmit} className="bg-white text-[#2f2a25] rounded-3xl p-6 md:p-8 text-left shadow-xl">
             <div className="grid md:grid-cols-2 gap-4">
-              <input className="rounded-2xl border border-[#dfc7a8] px-4 py-3" placeholder="Your full name" value={rsvp.name} onChange={(e) => setRsvp({ ...rsvp, name: e.target.value })} />
-              <select className="rounded-2xl border border-[#dfc7a8] px-4 py-3" value={rsvp.attending} onChange={(e) => setRsvp({ ...rsvp, attending: e.target.value })}>
+              <input required className="rounded-2xl border border-[#dfc7a8] px-4 py-3" placeholder="Your full name" value={rsvp.name} onChange={(e) => setRsvp({ ...rsvp, name: e.target.value })} />
+              <select required className="rounded-2xl border border-[#dfc7a8] px-4 py-3" value={rsvp.attending} onChange={(e) => setRsvp({ ...rsvp, attending: e.target.value })}>
                 <option value="">Will you attend?</option>
                 <option>Joyfully accepts</option>
                 <option>Regretfully declines</option>
               </select>
-              <input className="rounded-2xl border border-[#dfc7a8] px-4 py-3" placeholder="Number of guests" value={rsvp.guests} onChange={(e) => setRsvp({ ...rsvp, guests: e.target.value })} />
+              <input required className="rounded-2xl border border-[#dfc7a8] px-4 py-3" placeholder="Number of guests" value={rsvp.guests} onChange={(e) => setRsvp({ ...rsvp, guests: e.target.value })} />
             </div>
             <textarea className="mt-4 w-full rounded-2xl border border-[#dfc7a8] px-4 py-3 min-h-28" placeholder="Leave us a message" value={rsvp.message} onChange={(e) => setRsvp({ ...rsvp, message: e.target.value })} />
             <button type="submit" className="mt-5 w-full rounded-full bg-[#3b3028] text-white px-8 py-3 hover:bg-[#5b493c] transition">Submit RSVP</button>
