@@ -50,19 +50,19 @@ export default function WeddingWebsite() {
     receptionTime: "[5 PM ET]",
     receptionVenue: "[Triveni Banquet & Event Center]",
     receptionAddress: "[43090 Peacock Market Plaza Suite 190B, South Riding, VA 20152]",
-    rsvpDate: "[ASAP]",
+    rsvpDate: "[ASAP please]",
     email: "[405-697-9736]",
   };
 
   const schedule = [
-    { time: "[June 26, Friday 6 PM ET]", title: "Mehendi" },
+    { time: "[June 26, Friday 5 PM ET]", title: "Mehendi" },
     { time: "[June 27, Saturday 10 AM ET]", title: "Wedding Ceremony" },
     { time: "[June 28, Sunday 5 PM ET]", title: "Reception" }
   ];
 
   const galleryPhotos = [
   {
-    src: "/images/IMG_3167.jpg",
+    src: "/images/IMG_3163.jpg",
     alt: "Dijesh and Karuna photo 1",
   },
   {
@@ -70,7 +70,7 @@ export default function WeddingWebsite() {
     alt: "Dijesh and Karuna photo 2",
   },
   {
-    src: "/images/IMG_3163.jpg",
+    src: "/images/IMG_3167.jpg",
     alt: "Dijesh and Karuna photo 3",
   },
 ];
@@ -131,7 +131,6 @@ export default function WeddingWebsite() {
               <p className="text-lg font-medium">{wedding.date} at {wedding.ceremonyTime}</p>
               <p className="mt-4 font-semibold">{wedding.ceremonyVenue}</p>
               <p className="text-[#5d5148]">{wedding.ceremonyAddress}</p>
-              <button className="mt-6 rounded-full border border-[#b08a55] px-5 py-2 text-sm hover:bg-[#f4eadb]">Open Map</button>
             </div>
             <div className="rounded-3xl bg-[#fbf7f0] p-8 shadow-sm border border-[#dfc7a8]/50">
               <div className="text-3xl text-[#b08a55] mb-4">🥂</div>
@@ -139,7 +138,6 @@ export default function WeddingWebsite() {
               <p className="text-lg font-medium">{wedding.recepitonDate} at {wedding.receptionTime}</p>
               <p className="mt-4 font-semibold">{wedding.receptionVenue}</p>
               <p className="text-[#5d5148]">{wedding.receptionAddress}</p>
-              <button className="mt-6 rounded-full border border-[#b08a55] px-5 py-2 text-sm hover:bg-[#f4eadb]">Open Map</button>
             </div>
           </div>
         </div>
@@ -175,7 +173,6 @@ export default function WeddingWebsite() {
                 <option>Regretfully declines</option>
               </select>
               <input className="rounded-2xl border border-[#dfc7a8] px-4 py-3" placeholder="Number of guests" value={rsvp.guests} onChange={(e) => setRsvp({ ...rsvp, guests: e.target.value })} />
-              <input className="rounded-2xl border border-[#dfc7a8] px-4 py-3" placeholder="Meal preference / notes" value={rsvp.meal} onChange={(e) => setRsvp({ ...rsvp, meal: e.target.value })} />
             </div>
             <textarea className="mt-4 w-full rounded-2xl border border-[#dfc7a8] px-4 py-3 min-h-28" placeholder="Leave us a message" value={rsvp.message} onChange={(e) => setRsvp({ ...rsvp, message: e.target.value })} />
             <button type="submit" className="mt-5 w-full rounded-full bg-[#3b3028] text-white px-8 py-3 hover:bg-[#5b493c] transition">Submit RSVP</button>
