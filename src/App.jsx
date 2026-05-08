@@ -78,37 +78,75 @@ export default function WeddingWebsite() {
 
   return (
     <div className="min-h-screen bg-[#fbf7f0] text-[#2f2a25]">
-        <nav className="sticky top-0 z-50 bg-[#fbf7f0]/90 backdrop-blur border-b border-[#dfc7a8]/40">
+        <nav className="sticky top-0 z-50 bg-[#fbf7f0]/85 backdrop-blur-xl border-b border-[#dfc7a8]/40">
           <div className="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
-            <div className="font-serif text-xl tracking-wide">{wedding.couple}</div>
-          
+            <a href="#" className="font-serif text-lg md:text-xl tracking-wide text-[#3b3028]">
+              Karuna & Dijesh
+            </a>
+
             {/* Desktop Menu */}
-            <div className="hidden md:flex gap-6 text-sm uppercase tracking-widest">
-              <a href="#details" className="hover:text-[#a57942]">Details</a>
-              <a href="#schedule" className="hover:text-[#a57942]">Schedule</a>
-              <a href="#rsvp" className="hover:text-[#a57942]">RSVP</a>
-              <a href="#travel" className="hover:text-[#a57942]">Travel</a>
+            <div className="hidden md:flex items-center gap-2 text-sm uppercase tracking-widest">
+              {[
+                { label: "Details", href: "#details" },
+                { label: "Schedule", href: "#schedule" },
+                { label: "RSVP", href: "#rsvp" },
+                { label: "Travel", href: "#travel" },
+              ].map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-full px-4 py-2 text-[#5d5148] hover:bg-[#f4eadb] hover:text-[#8a6a44] transition"
+                >
+                  {item.label}
+                </a>
+              ))}
             </div>
-          
-            {/* Mobile Hamburger Button */}
+
+            {/* Stylish Mobile Button */}
             <button
-              className="md:hidden flex flex-col gap-1.5"
+              className="md:hidden relative w-11 h-11 rounded-full border border-[#dfc7a8] bg-white/70 shadow-sm flex items-center justify-center"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
             >
-              <span className="w-6 h-0.5 bg-[#3b3028]"></span>
-              <span className="w-6 h-0.5 bg-[#3b3028]"></span>
-              <span className="w-6 h-0.5 bg-[#3b3028]"></span>
+              <span
+                className={`absolute w-5 h-0.5 bg-[#3b3028] rounded-full transition duration-300 ${
+                  menuOpen ? "rotate-45 translate-y-0" : "-translate-y-1.5"
+                }`}
+              ></span>
+              <span
+                className={`absolute w-5 h-0.5 bg-[#3b3028] rounded-full transition duration-300 ${
+                  menuOpen ? "opacity-0" : "opacity-100"
+                }`}
+              ></span>
+              <span
+                className={`absolute w-5 h-0.5 bg-[#3b3028] rounded-full transition duration-300 ${
+                  menuOpen ? "-rotate-45 translate-y-0" : "translate-y-1.5"
+                }`}
+              ></span>
             </button>
           </div>
-          
-          {/* Mobile Menu */}
+
+          {/* Stylish Mobile Dropdown */}
           {menuOpen && (
-            <div className="md:hidden px-5 pb-5 flex flex-col gap-4 text-sm uppercase tracking-widest bg-[#fbf7f0] border-t border-[#dfc7a8]/40">
-              <a href="#details" onClick={() => setMenuOpen(false)} className="hover:text-[#a57942]">Details</a>
-              <a href="#schedule" onClick={() => setMenuOpen(false)} className="hover:text-[#a57942]">Schedule</a>
-              <a href="#rsvp" onClick={() => setMenuOpen(false)} className="hover:text-[#a57942]">RSVP</a>
-              <a href="#travel" onClick={() => setMenuOpen(false)} className="hover:text-[#a57942]">Travel</a>
+            <div className="md:hidden px-5 pb-5">
+              <div className="rounded-3xl bg-white/90 backdrop-blur-xl border border-[#dfc7a8]/50 shadow-lg p-4 flex flex-col gap-2 text-sm uppercase tracking-widest">
+                {[
+                  { label: "Details", href: "#details" },
+                  { label: "Schedule", href: "#schedule" },
+                  { label: "RSVP", href: "#rsvp" },
+                  { label: "Travel", href: "#travel" },
+                ].map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="rounded-2xl px-5 py-3 text-[#5d5148] hover:bg-[#f4eadb] hover:text-[#8a6a44] transition flex items-center justify-between"
+                  >
+                    <span>{item.label}</span>
+                    <span className="text-[#b08a55]">›</span>
+                  </a>
+                ))}
+              </div>
             </div>
           )}
         </nav>
