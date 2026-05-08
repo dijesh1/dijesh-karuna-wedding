@@ -151,7 +151,7 @@ export default function WeddingWebsite() {
         <div className="absolute top-32 -right-20 h-80 w-80 rounded-full bg-[#d8b889]/30 blur-3xl" />
         <div className="relative max-w-6xl mx-auto px-5 py-24 md:py-32 text-center">
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <p className="uppercase tracking-[0.35em] text-sm text-[#8a6a44] mb-5">Together with our families</p>
+            <p className="uppercase tracking-[0.35em] text-sm text-[#8a6a44] mb-5">Together with our families and friends</p>
             <p className="text-sm md:text-base text-[#6b5a4d] mb-6">Son of Ram Chandra Shrestha & Rita Shrestha • Daughter of Rita Timilsina</p>
             <h1 className="font-serif text-5xl md:text-8xl leading-tight text-[#3b3028]">{wedding.couple}</h1>
             <div className="flex items-center justify-center gap-4 my-8 text-[#b08a55]">
@@ -173,7 +173,7 @@ export default function WeddingWebsite() {
         <div className="mx-auto text-3xl text-[#b08a55] mb-5">✦</div>
         <h2 className="font-serif text-4xl mb-5">Our Story</h2>
         <p className="text-lg leading-8 text-[#5d5148] max-w-3xl mx-auto">
-          With joyful hearts, we invite you to celebrate the beginning of their forever. Surrounded by the love and blessings of our families, we look forward to sharing this special day with the people who mean the most to us.
+          With joyful hearts, we invite you to celebrate the beginning of their forever. Surrounded by the love and blessings of our families & friends, we look forward to sharing this special day with the people who mean the most to us.
         </p>
       </section>
 
