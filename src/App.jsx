@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 export default function WeddingWebsite() {
   const [rsvp, setRsvp] = useState({ name: "", attending: "", guests: "",  message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   // Replace these with your actual Google Form submit URL and entry IDs.
   const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSefKojcWST73rg21p4gTiJo-vBQmi9ONoTZHiLm3PzSYESe2A/formResponse";
@@ -77,17 +78,40 @@ export default function WeddingWebsite() {
 
   return (
     <div className="min-h-screen bg-[#fbf7f0] text-[#2f2a25]">
-      <nav className="sticky top-0 z-50 bg-[#fbf7f0]/90 backdrop-blur border-b border-[#dfc7a8]/40">
-        <div className="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
-          <div className="font-serif text-xl tracking-wide">{wedding.couple}</div>
-          <div className="hidden md:flex gap-6 text-sm uppercase tracking-widest">
-            <a href="#details" className="hover:text-[#a57942]">Details</a>
-            <a href="#schedule" className="hover:text-[#a57942]">Schedule</a>
-            <a href="#rsvp" className="hover:text-[#a57942]">RSVP</a>
-            <a href="#travel" className="hover:text-[#a57942]">Travel</a>
+        <nav className="sticky top-0 z-50 bg-[#fbf7f0]/90 backdrop-blur border-b border-[#dfc7a8]/40">
+          <div className="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+            <div className="font-serif text-xl tracking-wide">{wedding.couple}</div>
+          
+            {/* Desktop Menu */}
+            <div className="hidden md:flex gap-6 text-sm uppercase tracking-widest">
+              <a href="#details" className="hover:text-[#a57942]">Details</a>
+              <a href="#schedule" className="hover:text-[#a57942]">Schedule</a>
+              <a href="#rsvp" className="hover:text-[#a57942]">RSVP</a>
+              <a href="#travel" className="hover:text-[#a57942]">Travel</a>
+            </div>
+          
+            {/* Mobile Hamburger Button */}
+            <button
+              className="md:hidden flex flex-col gap-1.5"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              <span className="w-6 h-0.5 bg-[#3b3028]"></span>
+              <span className="w-6 h-0.5 bg-[#3b3028]"></span>
+              <span className="w-6 h-0.5 bg-[#3b3028]"></span>
+            </button>
           </div>
-        </div>
-      </nav>
+          
+          {/* Mobile Menu */}
+          {menuOpen && (
+            <div className="md:hidden px-5 pb-5 flex flex-col gap-4 text-sm uppercase tracking-widest bg-[#fbf7f0] border-t border-[#dfc7a8]/40">
+              <a href="#details" onClick={() => setMenuOpen(false)} className="hover:text-[#a57942]">Details</a>
+              <a href="#schedule" onClick={() => setMenuOpen(false)} className="hover:text-[#a57942]">Schedule</a>
+              <a href="#rsvp" onClick={() => setMenuOpen(false)} className="hover:text-[#a57942]">RSVP</a>
+              <a href="#travel" onClick={() => setMenuOpen(false)} className="hover:text-[#a57942]">Travel</a>
+            </div>
+          )}
+        </nav>
 
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#f7eadb] via-[#fbf7f0] to-[#fbf7f0]" />
