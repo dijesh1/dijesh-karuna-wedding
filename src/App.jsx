@@ -55,12 +55,6 @@ export default function WeddingWebsite() {
     email: "[405-697-9736]",
   };
 
-  const schedule = [
-    { time: "[June 26, Friday 5 PM ET]", title: "Mehendi" },
-    { time: "[June 27, Saturday 10 AM ET]", title: "Wedding Ceremony" },
-    { time: "[June 28, Sunday 5 PM ET]", title: "Reception" }
-  ];
-
   const galleryPhotos = [
   {
     src: "/images/IMG_3163.jpg",
@@ -88,7 +82,6 @@ export default function WeddingWebsite() {
             <div className="hidden md:flex items-center gap-2 text-sm uppercase tracking-widest">
               {[
                 { label: "Details", href: "#details" },
-                { label: "Schedule", href: "#schedule" },
                 { label: "RSVP", href: "#rsvp" },
                 { label: "Travel", href: "#travel" },
               ].map((item) => (
@@ -132,7 +125,6 @@ export default function WeddingWebsite() {
               <div className="rounded-3xl bg-white/90 backdrop-blur-xl border border-[#dfc7a8]/50 shadow-lg p-4 flex flex-col gap-2 text-sm uppercase tracking-widest">
                 {[
                   { label: "Details", href: "#details" },
-                  { label: "Schedule", href: "#schedule" },
                   { label: "RSVP", href: "#rsvp" },
                   { label: "Travel", href: "#travel" },
                 ].map((item) => (
@@ -186,7 +178,13 @@ export default function WeddingWebsite() {
       <section id="details" className="bg-white/60 border-y border-[#dfc7a8]/40">
         <div className="max-w-6xl mx-auto px-5 py-16">
           <h2 className="font-serif text-4xl text-center mb-12">Wedding Details</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
+              <div className="rounded-3xl bg-[#fbf7f0] p-8 shadow-sm border border-[#dfc7a8]/50">
+                <div className="text-3xl text-[#b08a55] mb-4">🌿</div>
+                <h3 className="font-serif text-3xl mb-3">Mehendi</h3>
+                <p className="text-lg font-medium">[06/26/2026] at [5 PM ET]</p>
+                <p className="text-[#5d5148]">[Mehendi Address TBD]</p>
+                </div>
             <div className="rounded-3xl bg-[#fbf7f0] p-8 shadow-sm border border-[#dfc7a8]/50">
               <div className="text-3xl text-[#b08a55] mb-4">📅</div>
               <h3 className="font-serif text-3xl mb-3">Wedding Ceremony</h3>
@@ -202,22 +200,6 @@ export default function WeddingWebsite() {
               <p className="text-[#5d5148]">{wedding.receptionAddress}</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section id="schedule" className="max-w-5xl mx-auto px-5 py-16">
-        <h2 className="font-serif text-4xl text-center mb-12">Schedule</h2>
-        <div className="space-y-5">
-          {schedule.map((item, index) => (
-            <div key={index} className="rounded-3xl bg-white/70 p-6 border border-[#dfc7a8]/40 flex gap-5 items-start shadow-sm">
-              <div className="rounded-full bg-[#f1e0c8] p-3 text-[#8a6a44]">⏰</div>
-              <div>
-                <p className="text-sm uppercase tracking-widest text-[#8a6a44]">{item.time}</p>
-                <h3 className="font-serif text-2xl">{item.title}</h3>
-                <p className="text-[#5d5148] mt-1">{item.detail}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 
