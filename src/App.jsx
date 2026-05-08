@@ -83,6 +83,7 @@ export default function WeddingWebsite() {
               {[
                 { label: "Details", href: "#details" },
                 { label: "RSVP", href: "#rsvp" },
+                { label: "Gallery", href: "#gallery" },
                 { label: "Travel", href: "#travel" },
               ].map((item) => (
                 <a
@@ -126,6 +127,7 @@ export default function WeddingWebsite() {
                 {[
                   { label: "Details", href: "#details" },
                   { label: "RSVP", href: "#rsvp" },
+                  { label: "Gallery", href: "#gallery" },
                   { label: "Travel", href: "#travel" },
                 ].map((item) => (
                   <a
@@ -226,7 +228,7 @@ export default function WeddingWebsite() {
         </div>
       </section>
 
-      <section className="bg-white/60 border-y border-[#dfc7a8]/40">
+      <section id="gallery" className="bg-white/60 border-y border-[#dfc7a8]/40">
         <div className="max-w-6xl mx-auto px-5 py-16">
           <div className="text-center mb-10">
             <div className="mx-auto text-3xl text-[#b08a55] mb-5">📷</div>
