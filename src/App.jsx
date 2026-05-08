@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 
 export default function WeddingWebsite() {
-  const [rsvp, setRsvp] = useState({ name: "", attending: "", guests: "", meal: "", message: "" });
+  const [rsvp, setRsvp] = useState({ name: "", attending: "", guests: "",  message: "" });
   const [submitted, setSubmitted] = useState(false);
 
   // Replace these with your actual Google Form submit URL and entry IDs.
@@ -33,40 +33,47 @@ export default function WeddingWebsite() {
       });
 
       setSubmitted(true);
-      setRsvp({ name: "", attending: "", guests: "", meal: "", message: "" });
+      setRsvp({ name: "", attending: "", guests: "", message: "" });
     } catch (error) {
       alert("Something went wrong. Please try again or contact us directly.");
     }
   };
 
   const wedding = {
-    couple: "Dijesh Shrestha & Karuna Timilsina",
-    date: "[Wedding Date]",
-    hashtag: "#DijeshKarunaWedding",
-    ceremonyTime: "[Ceremony Time]",
-    ceremonyVenue: "[Ceremony Venue Name]",
-    ceremonyAddress: "[Ceremony Address]",
-    receptionTime: "[Reception Time]",
-    receptionVenue: "[Reception Venue Name]",
-    receptionAddress: "[Reception Address]",
-    rsvpDate: "[RSVP Deadline]",
-    email: "[Your Email or Phone]",
+    couple: "Karuna Timilsina & Dijesh Shrestha ",
+    date: "[06/27/2026]",
+    hashtag: "#KarunaDijeshWedding",
+    ceremonyTime: "[10 AM ET]",
+    ceremonyVenue: "[ISKCON Temple, Subha Laxmi Hall]",
+    ceremonyAddress: "[10310 Oaklyn Dr, Potomac, MD 20854]",
+    recepitonDate: "[06/28/2026]",
+    receptionTime: "[5 PM ET]",
+    receptionVenue: "[Triveni Banquet & Event Center]",
+    receptionAddress: "[43090 Peacock Market Plaza Suite 190B, South Riding, VA 20152]",
+    rsvpDate: "[ASAP]",
+    email: "[405-697-9736]",
   };
 
   const schedule = [
-    { time: "[Time]", title: "Guest Arrival", detail: "Please arrive early to find your seat and enjoy the moment." },
-    { time: wedding.ceremonyTime, title: "Wedding Ceremony", detail: "We say ‘I do’ surrounded by our favorite people." },
-    { time: "[Time]", title: "Cocktail Hour", detail: "Light bites, drinks, and photos." },
-    { time: wedding.receptionTime, title: "Reception", detail: "Dinner, dancing, and celebration." },
-    { time: "[Time]", title: "Send-Off", detail: "A sweet ending to a beautiful day." },
+    { time: "[June 26, Friday 6 PM ET]", title: "Mehendi" },
+    { time: "[June 27, Saturday 10 AM ET]", title: "Wedding Ceremony" },
+    { time: "[June 28, Sunday 5 PM ET]", title: "Reception" }
   ];
 
-  const faqs = [
-    { q: "What should I wear?", a: "Please dress in [formal / semi-formal / traditional / cocktail] attire. We recommend avoiding white or ivory." },
-    { q: "Can I bring a plus one?", a: "Please refer to your invitation. We are only able to accommodate guests listed on the invite." },
-    { q: "Are children invited?", a: "Please refer to your invitation, or contact us if you have any questions." },
-    { q: "Where should I park?", a: "Parking details will be available at the venue. Additional instructions can be added here." },
-  ];
+  const galleryPhotos = [
+  {
+    src: "/images/IMG_3167.jpg",
+    alt: "Dijesh and Karuna photo 1",
+  },
+  {
+    src: "/images/IMG_3947.jpg",
+    alt: "Dijesh and Karuna photo 2",
+  },
+  {
+    src: "/images/IMG_3163.jpg",
+    alt: "Dijesh and Karuna photo 3",
+  },
+];
 
   return (
     <div className="min-h-screen bg-[#fbf7f0] text-[#2f2a25]">
@@ -78,7 +85,6 @@ export default function WeddingWebsite() {
             <a href="#schedule" className="hover:text-[#a57942]">Schedule</a>
             <a href="#rsvp" className="hover:text-[#a57942]">RSVP</a>
             <a href="#travel" className="hover:text-[#a57942]">Travel</a>
-            <a href="#faq" className="hover:text-[#a57942]">FAQ</a>
           </div>
         </div>
       </nav>
@@ -90,7 +96,7 @@ export default function WeddingWebsite() {
         <div className="relative max-w-6xl mx-auto px-5 py-24 md:py-32 text-center">
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <p className="uppercase tracking-[0.35em] text-sm text-[#8a6a44] mb-5">Together with their families</p>
-            <p className="text-sm md:text-base text-[#6b5a4d] mb-6">Son of Ram Chandra Shrestha & Rita Shrestha • Daughter of Rita Tiwari</p>
+            <p className="text-sm md:text-base text-[#6b5a4d] mb-6">Son of Ram Chandra Shrestha & Rita Shrestha • Daughter of Rita Timilsina</p>
             <h1 className="font-serif text-5xl md:text-8xl leading-tight text-[#3b3028]">{wedding.couple}</h1>
             <div className="flex items-center justify-center gap-4 my-8 text-[#b08a55]">
               <span className="h-px w-20 bg-[#b08a55]" />
@@ -98,7 +104,7 @@ export default function WeddingWebsite() {
               <span className="h-px w-20 bg-[#b08a55]" />
             </div>
             <p className="text-xl md:text-2xl font-light">We joyfully invite you to celebrate our wedding ceremony and reception.</p>
-            <p className="mt-5 text-lg uppercase tracking-[0.25em] text-[#8a6a44]">{wedding.date}</p>
+            <p className="mt-5 text-lg uppercase tracking-[0.25em] text-[#8a6a44]">[06/26/2026 - 06/28/2026]</p>
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
               <a href="#rsvp" className="rounded-full bg-[#3b3028] text-white px-8 py-3 shadow-lg hover:bg-[#5b493c] transition">RSVP Now</a>
               <a href="#details" className="rounded-full border border-[#b08a55] px-8 py-3 hover:bg-[#f4eadb] transition">View Details</a>
@@ -111,7 +117,7 @@ export default function WeddingWebsite() {
         <div className="mx-auto text-3xl text-[#b08a55] mb-5">✦</div>
         <h2 className="font-serif text-4xl mb-5">Our Story</h2>
         <p className="text-lg leading-8 text-[#5d5148] max-w-3xl mx-auto">
-          With joyful hearts, Dijesh Shrestha and Karuna Timilsina invite you to celebrate the beginning of their forever. Surrounded by the love and blessings of their families, they look forward to sharing this special day with the people who mean the most to them.
+          With joyful hearts, we invite you to celebrate the beginning of their forever. Surrounded by the love and blessings of their families, we look forward to sharing this special day with the people who mean the most to us.
         </p>
       </section>
 
@@ -130,7 +136,7 @@ export default function WeddingWebsite() {
             <div className="rounded-3xl bg-[#fbf7f0] p-8 shadow-sm border border-[#dfc7a8]/50">
               <div className="text-3xl text-[#b08a55] mb-4">🥂</div>
               <h3 className="font-serif text-3xl mb-3">Reception</h3>
-              <p className="text-lg font-medium">To follow at {wedding.receptionTime}</p>
+              <p className="text-lg font-medium">{wedding.recepitonDate} at {wedding.receptionTime}</p>
               <p className="mt-4 font-semibold">{wedding.receptionVenue}</p>
               <p className="text-[#5d5148]">{wedding.receptionAddress}</p>
               <button className="mt-6 rounded-full border border-[#b08a55] px-5 py-2 text-sm hover:bg-[#f4eadb]">Open Map</button>
@@ -179,49 +185,59 @@ export default function WeddingWebsite() {
         </div>
       </section>
 
-      <section id="travel" className="max-w-6xl mx-auto px-5 py-16">
-        <h2 className="font-serif text-4xl text-center mb-12">Travel & Stay</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          <InfoCard icon="🏨" title="Hotel" text="[Add hotel name, room block details, booking link, and deadline.]" />
-          <InfoCard icon="📍" title="Transportation" text="[Add airport, parking, shuttle, or rideshare details.]" />
-          <InfoCard icon="🎁" title="Registry" text="Your presence is the greatest gift. Registry details can be added here if desired." />
-        </div>
-      </section>
-
       <section className="bg-white/60 border-y border-[#dfc7a8]/40">
         <div className="max-w-6xl mx-auto px-5 py-16">
           <div className="text-center mb-10">
             <div className="mx-auto text-3xl text-[#b08a55] mb-5">📷</div>
             <h2 className="font-serif text-4xl">Gallery</h2>
-            <p className="text-[#5d5148] mt-3">Add your favorite engagement photos or couple memories here.</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[1, 2, 3, 4].map((n) => (
-              <div key={n} className="aspect-[4/5] rounded-3xl bg-gradient-to-br from-[#ead7c4] to-[#f8efe5] border border-[#dfc7a8]/40 flex items-center justify-center text-[#8a6a44]">
-                Photo {n}
-              </div>
-            ))}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {galleryPhotos.map((photo, index) => (
+                <div
+                  key={index}
+                  className="rounded-3xl overflow-hidden border border-[#dfc7a8]/40 shadow-md bg-[#f8efe5]"
+                >
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+        </div>
+      </section>
+
+            <section id="travel" className="max-w-5xl mx-auto px-5 py-16 text-center">
+        <div className="mx-auto text-3xl text-[#b08a55] mb-5">✈️</div>
+        <h2 className="font-serif text-4xl mb-5">Travel Information</h2>
+        <p className="text-lg leading-8 text-[#5d5148] max-w-3xl mx-auto">
+          For guests traveling from out of state, the nearby airports are:
+        </p>
+
+        <div className="mt-8 grid md:grid-cols-3 gap-5 text-left">
+          <div className="rounded-3xl bg-white/70 p-6 border border-[#dfc7a8]/40 shadow-sm">
+            <h3 className="font-serif text-2xl mb-2">Washington Dulles International Airport</h3>
+            <p className="text-[#5d5148]">IAD — Dulles, VA</p>
+          </div>
+
+          <div className="rounded-3xl bg-white/70 p-6 border border-[#dfc7a8]/40 shadow-sm">
+            <h3 className="font-serif text-2xl mb-2">Ronald Reagan Washington National Airport</h3>
+            <p className="text-[#5d5148]">DCA — Arlington, VA</p>
+          </div>
+
+          <div className="rounded-3xl bg-white/70 p-6 border border-[#dfc7a8]/40 shadow-sm">
+            <h3 className="font-serif text-2xl mb-2">Baltimore/Washington International Airport</h3>
+            <p className="text-[#5d5148]">BWI — Baltimore, MD</p>
           </div>
         </div>
       </section>
 
-      <section id="faq" className="max-w-4xl mx-auto px-5 py-16">
-        <div className="mx-auto text-3xl text-[#b08a55] mb-5">?</div>
-        <h2 className="font-serif text-4xl text-center mb-10">FAQ</h2>
-        <div className="space-y-4">
-          {faqs.map((item, index) => (
-            <div key={index} className="rounded-3xl bg-white/70 p-6 border border-[#dfc7a8]/40">
-              <h3 className="font-serif text-xl mb-2">{item.q}</h3>
-              <p className="text-[#5d5148]">{item.a}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <footer className="text-center px-5 py-12 bg-[#2f2a25] text-white"></footer>
 
       <footer className="text-center px-5 py-12 bg-[#2f2a25] text-white">
         <p className="font-serif text-3xl mb-3">{wedding.couple}</p>
-        <p className="text-white/70">{wedding.date} • {wedding.hashtag}</p>
-        <p className="text-white/50 text-sm mt-5">Questions? Contact us at {wedding.email}</p>
+        <p className="text-white/70">[06-26-2026 to 06-28-2026] • {wedding.hashtag}</p>
       </footer>
     </div>
   );
