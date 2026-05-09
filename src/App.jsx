@@ -151,9 +151,9 @@ export default function WeddingWebsite() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#f7eadb] via-[#fbf7f0] to-[#fbf7f0]" />
         <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-[#e8c7bc]/40 blur-3xl" />
         <div className="absolute top-32 -right-20 h-80 w-80 rounded-full bg-[#d8b889]/30 blur-3xl" />
-        <div className="relative max-w-6xl mx-auto px-5 py-24 md:py-32 text-center">
+        <div className="relative max-w-6xl mx-auto px-5 pt-14 pb-12 md:pt-24 md:pb-20 text-center">
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <p className="uppercase tracking-[0.35em] text-sm text-[#8a6a44] mb-5">Together with our families & friends</p>
+            <p className="uppercase tracking-[0.35em] text-sm text-[#8a6a44] mb-3">Together with our families & friends</p>
             <h1 className="font-serif text-5xl md:text-8xl leading-tight text-[#3b3028]">{wedding.couple}</h1>
             <div className="flex items-center justify-center gap-4 my-8 text-[#b08a55]">
               <span className="h-px w-20 bg-[#b08a55]" />
@@ -168,7 +168,7 @@ export default function WeddingWebsite() {
             </div>
             <a
               href="#details"
-              className="mt-12 inline-flex flex-col items-center text-[#8a6a44] hover:text-[#3b3028] transition"
+              className="mt-6 inline-flex flex-col items-center text-[#8a6a44] hover:text-[#3b3028] transition"
             >
             <span className="text-xs uppercase tracking-[0.3em] mb-2">
               Scroll for details
