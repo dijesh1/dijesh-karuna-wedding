@@ -208,46 +208,52 @@ export default function WeddingWebsite() {
       </section>
 
       <section id="dress-code" className="max-w-6xl mx-auto px-5 py-16">
-  <div className="text-center mb-12">
-    <div className="mx-auto text-3xl text-[#b08a55] mb-5">👗</div>
-    <h2 className="font-serif text-4xl mb-4">Dress Code & Colors</h2>
-    <p className="text-[#5d5148] max-w-3xl mx-auto">
-      We would love for our guests to join us in traditional and festive attire for each celebration.
-    </p>
-  </div>
+        <div className="text-center mb-12">
+          <div className="mx-auto text-3xl text-[#b08a55] mb-5">👗</div>
+          <h2 className="font-serif text-4xl mb-4">Dress Code & Colors</h2>
+          <p className="text-[#5d5148] max-w-3xl mx-auto">
+            We would love for our guests to join us in traditional and festive attire for each celebration.
+          </p>
+        </div>
 
-  <div className="grid md:grid-cols-3 gap-6">
-    <div className="rounded-3xl bg-white/70 p-6 border border-[#dfc7a8]/40 shadow-sm">
-      <h3 className="font-serif text-2xl mb-3">Mehendi</h3>
-      <p className="text-[#5d5148]">
-        <span className="font-semibold text-[#3b3028]">Color Theme:</span> Green
-      </p>
-      <p className="text-[#5d5148] mt-2">
-        Guests are encouraged to wear festive green attire.
-      </p>
-    </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* Mehendi */}
+          <div className="rounded-3xl bg-white/70 p-6 border border-[#dfc7a8]/40 shadow-sm">
+            <div className="h-2 w-20 rounded-full bg-green-600 mb-5"></div>
+            <h3 className="font-serif text-2xl mb-3">Mehendi</h3>
+            <p className="text-[#5d5148]">
+              <span className="font-semibold text-[#3b3028]">Color Theme:</span> Green
+            </p>
+            <p className="text-[#5d5148] mt-2">
+              Guests are encouraged to wear festive green attire.
+            </p>
+          </div>
 
-    <div className="rounded-3xl bg-white/70 p-6 border border-[#dfc7a8]/40 shadow-sm">
-      <h3 className="font-serif text-2xl mb-3">Wedding Ceremony</h3>
-      <p className="text-[#5d5148]">
-        <span className="font-semibold text-[#3b3028]">Men:</span> Traditional wear (Daura Suruwal recommended)
-      </p>
-      <p className="text-[#5d5148] mt-2">
-        <span className="font-semibold text-[#3b3028]">Women:</span> Traditional Saree Wear
-      </p>
-    </div>
+          {/* Wedding Ceremony */}
+          <div className="rounded-3xl bg-white/70 p-6 border border-[#dfc7a8]/40 shadow-sm">
+            <div className="h-2 w-20 rounded-full bg-[#b08a55] mb-5"></div>
+            <h3 className="font-serif text-2xl mb-3">Wedding Ceremony</h3>
+            <p className="text-[#5d5148]">
+              <span className="font-semibold text-[#3b3028]">Men:</span> Daura Suruwal
+            </p>
+            <p className="text-[#5d5148] mt-2">
+              <span className="font-semibold text-[#3b3028]">Women:</span> Traditional Saree Wear
+            </p>
+          </div>
 
-    <div className="rounded-3xl bg-white/70 p-6 border border-[#dfc7a8]/40 shadow-sm">
-      <h3 className="font-serif text-2xl mb-3">Reception</h3>
-      <p className="text-[#5d5148]">
-        <span className="font-semibold text-[#3b3028]">Men:</span> Formal Suit / Coat Pant (Black recommended)
-      </p>
-      <p className="text-[#5d5148] mt-2">
-        <span className="font-semibold text-[#3b3028]">Women:</span> Party Wear / Saree
-      </p>
-    </div>
-  </div>
-</section>
+          {/* Reception */}
+          <div className="rounded-3xl bg-white/70 p-6 border border-[#dfc7a8]/40 shadow-sm">
+            <div className="h-2 w-20 rounded-full bg-[#2f2a25] mb-5"></div>
+            <h3 className="font-serif text-2xl mb-3">Reception</h3>
+            <p className="text-[#5d5148]">
+              <span className="font-semibold text-[#3b3028]">Men:</span> Formal Suit / Coat Pant (Black recommended)
+            </p>
+            <p className="text-[#5d5148] mt-2">
+              <span className="font-semibold text-[#3b3028]">Women:</span> Party Wear / Saree
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section id="rsvp" className="bg-[#3b3028] text-white">
         <div className="max-w-4xl mx-auto px-5 py-16 text-center">
