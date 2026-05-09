@@ -281,7 +281,7 @@ export default function WeddingWebsite() {
             <textarea className="mt-4 w-full rounded-2xl border border-[#dfc7a8] px-4 py-3 min-h-28" placeholder="Leave us a message" value={rsvp.message} onChange={(e) => setRsvp({ ...rsvp, message: e.target.value })} />
             <button type="submit" className="mt-5 w-full rounded-full bg-[#3b3028] text-white px-8 py-3 hover:bg-[#5b493c] transition">Submit RSVP</button>
             {submitted && <p className="text-center text-green-700 font-medium mt-4">Thank you! Your RSVP has been submitted.</p>}
-            <p className="text-xs text-[#6b5a4d] mt-4 text-center">Your RSVP will be saved to our Google Form response sheet.</p>
+            <p className="text-xs text-[#6b5a4d] mt-4 text-center">Thank you for helping us plan our celebration.</p>
           </form>
         </div>
       </section>
