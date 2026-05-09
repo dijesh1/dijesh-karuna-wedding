@@ -242,7 +242,7 @@ export default function WeddingWebsite() {
             <div className="h-2 w-20 rounded-full bg-[#b08a55] mb-5"></div>
             <h3 className="font-serif text-2xl mb-3">Wedding Ceremony</h3>
             <p className="text-[#5d5148]">
-              <span className="font-semibold text-[#3b3028]">Men:</span> Daura Suruwal
+              <span className="font-semibold text-[#3b3028]">Men:</span> Daura Suruwal Recommended
             </p>
             <p className="text-[#5d5148] mt-2">
               <span className="font-semibold text-[#3b3028]">Women:</span> Traditional Saree Wear
