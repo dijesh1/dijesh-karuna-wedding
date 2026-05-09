@@ -167,6 +167,15 @@ export default function WeddingWebsite() {
               <a href="#rsvp" className="rounded-full bg-[#3b3028] text-white px-8 py-3 shadow-lg hover:bg-[#5b493c] transition">RSVP Now</a>
               <a href="#details" className="rounded-full border border-[#b08a55] px-8 py-3 hover:bg-[#f4eadb] transition">View Details</a>
             </div>
+            <a
+              href="#details"
+              className="mt-12 inline-flex flex-col items-center text-[#8a6a44] hover:text-[#3b3028] transition"
+            >
+            <span className="text-xs uppercase tracking-[0.3em] mb-2">
+              Scroll for details
+            </span>
+            <span className="text-3xl animate-bounce">⌄</span>
+            </a>
           </motion.div>
         </div>
       </section>
