@@ -51,7 +51,7 @@ export default function WeddingWebsite() {
     receptionTime: "[5 PM ET]",
     receptionVenue: "[Triveni Banquet & Event Center]",
     receptionAddress: "[43090 Peacock Market Plaza Suite 190B, South Riding, VA 20152]",
-    rsvpDate: "[ASAP please]",
+    rsvpDate: "[May 23 please]",
     email: "[405-697-9736]",
   };
 
@@ -82,6 +82,7 @@ export default function WeddingWebsite() {
             <div className="hidden md:flex items-center gap-2 text-sm uppercase tracking-widest">
               {[
                 { label: "Details", href: "#details" },
+                { label: "Dress Code", href: "#dress-code" },
                 { label: "RSVP", href: "#rsvp" },
                 { label: "Gallery", href: "#gallery" },
                 { label: "Travel", href: "#travel" },
@@ -126,6 +127,7 @@ export default function WeddingWebsite() {
               <div className="rounded-3xl bg-white/90 backdrop-blur-xl border border-[#dfc7a8]/50 shadow-lg p-4 flex flex-col gap-2 text-sm uppercase tracking-widest">
                 {[
                   { label: "Details", href: "#details" },
+                  { label: "Dress Code", href: "#dress-code" },
                   { label: "RSVP", href: "#rsvp" },
                   { label: "Gallery", href: "#gallery" },
                   { label: "Travel", href: "#travel" },
@@ -204,6 +206,48 @@ export default function WeddingWebsite() {
           </div>
         </div>
       </section>
+
+      <section id="dress-code" className="max-w-6xl mx-auto px-5 py-16">
+  <div className="text-center mb-12">
+    <div className="mx-auto text-3xl text-[#b08a55] mb-5">👗</div>
+    <h2 className="font-serif text-4xl mb-4">Dress Code & Colors</h2>
+    <p className="text-[#5d5148] max-w-3xl mx-auto">
+      We would love for our guests to join us in traditional and festive attire for each celebration.
+    </p>
+  </div>
+
+  <div className="grid md:grid-cols-3 gap-6">
+    <div className="rounded-3xl bg-white/70 p-6 border border-[#dfc7a8]/40 shadow-sm">
+      <h3 className="font-serif text-2xl mb-3">Mehendi</h3>
+      <p className="text-[#5d5148]">
+        <span className="font-semibold text-[#3b3028]">Color Theme:</span> Green
+      </p>
+      <p className="text-[#5d5148] mt-2">
+        Guests are encouraged to wear festive green attire.
+      </p>
+    </div>
+
+    <div className="rounded-3xl bg-white/70 p-6 border border-[#dfc7a8]/40 shadow-sm">
+      <h3 className="font-serif text-2xl mb-3">Wedding Ceremony</h3>
+      <p className="text-[#5d5148]">
+        <span className="font-semibold text-[#3b3028]">Men:</span> Daura Suruwal
+      </p>
+      <p className="text-[#5d5148] mt-2">
+        <span className="font-semibold text-[#3b3028]">Women:</span> Traditional Saree Wear
+      </p>
+    </div>
+
+    <div className="rounded-3xl bg-white/70 p-6 border border-[#dfc7a8]/40 shadow-sm">
+      <h3 className="font-serif text-2xl mb-3">Reception</h3>
+      <p className="text-[#5d5148]">
+        <span className="font-semibold text-[#3b3028]">Men:</span> Formal Suit / Coat Pant
+      </p>
+      <p className="text-[#5d5148] mt-2">
+        <span className="font-semibold text-[#3b3028]">Women:</span> Party Wear / Saree
+      </p>
+    </div>
+  </div>
+</section>
 
       <section id="rsvp" className="bg-[#3b3028] text-white">
         <div className="max-w-4xl mx-auto px-5 py-16 text-center">
