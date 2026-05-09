@@ -45,7 +45,7 @@ export default function WeddingWebsite() {
     date: "[06/27/2026]",
     hashtag: "#KarunaDijeshWedding",
     ceremonyTime: "[10 AM ET]",
-    ceremonyVenue: "[ISKCON Temple, Subha Laxmi Hall]",
+    ceremonyVenue: "[ISKCON Temple of DC, Subha Laxmi Hall]",
     ceremonyAddress: "[10310 Oaklyn Dr, Potomac, MD 20854]",
     recepitonDate: "[06/28/2026]",
     receptionTime: "[5 PM ET]",
