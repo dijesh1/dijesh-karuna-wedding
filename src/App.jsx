@@ -240,7 +240,7 @@ export default function WeddingWebsite() {
     <div className="rounded-3xl bg-white/70 p-6 border border-[#dfc7a8]/40 shadow-sm">
       <h3 className="font-serif text-2xl mb-3">Reception</h3>
       <p className="text-[#5d5148]">
-        <span className="font-semibold text-[#3b3028]">Men:</span> Formal Black Suit / Coat Pant
+        <span className="font-semibold text-[#3b3028]">Men:</span> Formal Suit / Coat Pant (Black recommended)
       </p>
       <p className="text-[#5d5148] mt-2">
         <span className="font-semibold text-[#3b3028]">Women:</span> Party Wear / Saree
