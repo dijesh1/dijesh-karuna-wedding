@@ -195,7 +195,7 @@ export default function WeddingWebsite() {
                 <div className="text-3xl text-[#b08a55] mb-4">🌿</div>
                 <h3 className="font-serif text-3xl mb-3">Mehendi</h3>
                 <p className="text-lg font-medium">[06/26/2026] at [5 PM ET]</p>
-                <p className="text-[#5d5148]">[Mehendi Address TBD]</p>
+                <p className="text-[#5d5148]">[2818 Lee Oaks Place, Falls Church, VA 22046]</p>
                 </div>
             <div className="rounded-3xl bg-[#fbf7f0] p-8 shadow-sm border border-[#dfc7a8]/50">
               <div className="text-3xl text-[#b08a55] mb-4">📅</div>
