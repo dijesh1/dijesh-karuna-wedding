@@ -51,7 +51,7 @@ export default function WeddingWebsite() {
     receptionTime: "[5 PM ET]",
     receptionVenue: "[Triveni Banquet & Event Center]",
     receptionAddress: "[43090 Peacock Market Plaza Suite 190B, South Riding, VA 20152]",
-    rsvpDate: "[May 23 please]",
+    rsvpDate: "[June 17 please]",
     email: "[405-697-9736]",
   };
 
