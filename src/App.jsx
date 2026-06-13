@@ -267,7 +267,7 @@ export default function WeddingWebsite() {
         <div className="max-w-4xl mx-auto px-5 py-16 text-center">
           <div className="mx-auto text-3xl text-[#d8b889] mb-5">✉️</div>
           <h2 className="font-serif text-4xl mb-4">Kindly RSVP</h2>
-          <p className="text-white/75 mb-8">Please respond by {wedding.rsvpDate}. We can’t wait to celebrate with you.</p>
+          <p className="text-white/75 mb-8">We can’t wait to celebrate with you.</p>
           <form onSubmit={handleRsvpSubmit} className="bg-white text-[#2f2a25] rounded-3xl p-6 md:p-8 text-left shadow-xl">
             <div className="grid md:grid-cols-2 gap-4">
               <input required className="rounded-2xl border border-[#dfc7a8] px-4 py-3" placeholder="Your full name" value={rsvp.name} onChange={(e) => setRsvp({ ...rsvp, name: e.target.value })} />
